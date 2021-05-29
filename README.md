@@ -2,16 +2,16 @@
 
 # Table of Contents
 
-- [**_Demo_**](#demo)
-- [**_Installation_**](#installation)
-- [**_Usage_**](#usage)
-- [**_Constructor Options_**](#constructor-options)
-- [**_Examples_**](#examples)
-- [**_License_**](#license)
+- [**Demo**](#demo)
+- [**Installation**](#installation)
+- [**Usage**](#usage)
+- [**Constructor Options**](#constructor-options)
+- [**Examples**](#examples)
+- [**License**](#license)
 
 # Demo
 
-[**_Demo_**](http://hilongjw.github.io/vue-progressbar/index.html)
+[**_Demo_**](https://github.com/imanmalekian31/vue-radio-botton)
 
 # Installation
 
@@ -31,8 +31,6 @@ Vue.use(VueRadioButton);
 ```
 
 # Usage
-
-main.js
 
 ```html
 <template>
