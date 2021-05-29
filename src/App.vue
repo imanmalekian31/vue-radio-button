@@ -1,34 +1,31 @@
 <template>
   <div id="app">
     <h1>Vue Radio Button</h1>
+    <a href="https://github.com/imanmalekian31/vue-radio-botton" target="blank">
+      <img width="40" height="40" :src="require('./assets/github-logo.png')" />
+    </a>
 
+    <h4 class="title-example">Default</h4>
     <ExampleOne />
+    <h4 class="title-example">Custom color</h4>
     <ExampleTwo />
+    <h4 class="title-example">NoRipple</h4>
     <ExampleThree />
+    <h4 class="title-example">Custom width & height</h4>
     <ExampleFour />
-
-    <VueRadioButton
-      v-model="selectedButton"
-      :options="buttons"
-      color="#d3edfe"
-      width="150"
-      height="80"
-    >
-      <template #default="{ props }">
-        <div class="vueRadioButtonFour">
-          <img width="40" height="40" :src="props.icon" class="icon" />
-          <div class="title">
-            {{ props.title }}
-          </div>
-        </div>
-      </template>
-    </VueRadioButton>
+    <h4 class="title-example">Another example</h4>
+    <ExampleFive />
   </div>
 </template>
 
 <script>
-import VueRadioButton from "./components/VueRadioButton";
-import { ExampleOne, ExampleTwo, ExampleThree, ExampleFour } from "./examples";
+import {
+  ExampleOne,
+  ExampleTwo,
+  ExampleThree,
+  ExampleFour,
+  ExampleFive,
+} from "./examples";
 
 export default {
   name: "App",
@@ -37,38 +34,8 @@ export default {
     ExampleTwo,
     ExampleThree,
     ExampleFour,
-    VueRadioButton,
+    ExampleFive,
   },
-  data: () => ({
-    selectedButton: "",
-    buttons: [
-      {
-        id: 1,
-        icon: require("./assets/logo.png"),
-        title: "Vue",
-      },
-      {
-        id: 2,
-        icon: require("./assets/nuxt.svg"),
-        title: "Nuxt",
-      },
-      {
-        id: 3,
-        icon: require("./assets/vite.svg"),
-        title: "Vite",
-      },
-      {
-        id: 4,
-        icon: require("./assets/bootstrap-vue.svg"),
-        title: "Bootstrap",
-      },
-      {
-        id: 5,
-        icon: require("./assets/vuetify.svg"),
-        title: "Vuetify",
-      },
-    ],
-  }),
 };
 </script>
 
@@ -86,21 +53,14 @@ export default {
   justify-content: center;
   align-items: center;
   font-family: Arial;
+  padding: 5px;
 }
 </style>
 
 <style scoped>
-/* example four  */
-.vueRadioButtonFour {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.vueRadioButtonFour .icon {
-  object-fit: contain;
+.title-example {
+  border-bottom: 1px solid #606f7b;
+  padding: 5px 20px;
+  color: #606f7b;
 }
 </style>
