@@ -1,10 +1,6 @@
 <template>
   <div>
-    <VueRadioButton
-      v-model="selectedButton"
-      :options="buttons"
-      color="#f8a1155e"
-    >
+    <VueRadioButton v-model="selectedButton" :options="buttons" color="#d3edfe">
       <template #default="{ props }">
         <div class="vueRadioButton">
           <img width="40" height="40" :src="props.icon" class="icon" />
