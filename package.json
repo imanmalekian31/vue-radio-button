@@ -1,12 +1,30 @@
 {
   "name": "vue-radio-button",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "files": [
+    "dist/*"
+  ],
+  "author": {
+    "name": "Iman Malekian",
+    "email": "imanmalekian@gmail.com"
+  },
+  "repository": "https://github.com/imanmalekian31/vue-radio-botton",
+  "bugs": "https://github.com/imanmalekian31/vue-radio-botton/issues",
+  "keywords": [
+    "vue",
+    "radio",
+    "button",
+    "custom"
+  ],
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name vue-radio-button ./src/install.js",
     "lint": "vue-cli-service lint"
   },
+  "main": ".dist/vue-radio-button.common.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
