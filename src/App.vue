@@ -13,8 +13,11 @@
     <ExampleThree />
     <h4 class="title-example">Custom width & height</h4>
     <ExampleFour />
-    <h4 class="title-example">Another example</h4>
+
+    <h4 class="title-example">Another examples</h4>
     <ExampleFive />
+    <br />
+    <ExampleSix />
   </div>
 </template>
 
@@ -25,6 +28,7 @@ import {
   ExampleThree,
   ExampleFour,
   ExampleFive,
+  ExampleSix,
 } from "./examples";
 
 export default {
@@ -35,16 +39,10 @@ export default {
     ExampleThree,
     ExampleFour,
     ExampleFive,
+    ExampleSix,
   },
 };
 </script>
-
-<style>
-.v-radio-button {
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  border: none;
-}
-</style>
 
 <style>
 #app {
