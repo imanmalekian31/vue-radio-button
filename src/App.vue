@@ -9,7 +9,7 @@
     <ExampleOne />
     <h4 class="title-example">Custom color</h4>
     <ExampleTwo />
-    <h4 class="title-example">NoRipple</h4>
+    <h4 class="title-example">Without ripple</h4>
     <ExampleThree />
     <h4 class="title-example">Custom width & height</h4>
     <ExampleFour />
