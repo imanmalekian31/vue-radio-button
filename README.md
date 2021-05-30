@@ -11,7 +11,7 @@
 
 # Demo
 
-[**_Demo_**](https://github.com/imanmalekian31/vue-radio-botton)
+[**Demo**](https://vue-radio-button.herokuapp.com/)
 
 # Installation
 
@@ -36,7 +36,7 @@ Vue.use(VueRadioButton);
 <template>
   <VueRadioButton v-model="selectedButton" :options="buttons">
     <template #default="{ props }">
-      <div class="vueRadioButtonOne">
+      <div class="vue-radio-button">
         <img width="40" height="40" :src="props.icon" class="icon" />
         <div class="title">
           {{ props.title }}
@@ -46,8 +46,28 @@ Vue.use(VueRadioButton);
   </VueRadioButton>
 </template>
 
+<script>
+  export default {
+    data: () => ({
+      selectedButton: "",
+      buttons: [
+        {
+          id: 1,
+          icon: "https://vuejs.org/images/logo.svg",
+          title: "Vue",
+        },
+        {
+          id: 2,
+          icon: "https://vitejs.dev/logo.svg",
+          title: "ٰVite",
+        },
+      ],
+    }),
+  };
+</script>
+
 <style>
-  .vueRadioButtonOne {
+  .vue-radio-button {
     height: 100%;
     width: 100%;
     display: flex;
@@ -56,13 +76,13 @@ Vue.use(VueRadioButton);
     align-items: center;
   }
 
-  .vueRadioButtonOne .icon {
+  .icon {
     object-fit: contain;
     position: absolute;
     top: 15px;
   }
 
-  .vueRadioButtonOne .title {
+  .title {
     position: absolute;
     bottom: 20px;
   }
@@ -88,7 +108,7 @@ Vue.use(VueRadioButton);
 <template>
   <VueRadioButton v-model="selectedButton" :options="buttons" color="#f8a1155e">
     <template #default="{ props }">
-      <div class="vueRadioButton">
+      <div class="vue-radio-button">
         <img width="40" height="40" :src="props.icon" class="icon" />
         <div class="title">
           {{ props.title }}
@@ -98,8 +118,28 @@ Vue.use(VueRadioButton);
   </VueRadioButton>
 </template>
 
+<script>
+  export default {
+    data: () => ({
+      selectedButton: "",
+      buttons: [
+        {
+          id: 1,
+          icon: "https://vuejs.org/images/logo.svg",
+          title: "Vue",
+        },
+        {
+          id: 2,
+          icon: "https://vitejs.dev/logo.svg",
+          title: "ٰVite",
+        },
+      ],
+    }),
+  };
+</script>
+
 <style>
-  .vueRadioButton {
+  .vue-radio-button {
     height: 100%;
     width: 100%;
     display: flex;
@@ -132,15 +172,35 @@ Vue.use(VueRadioButton);
     no-ripple
   >
     <template #default="{ props }">
-      <div class="vueRadioButton">
+      <div class="vue-radio-button">
         <img width="50" height="50" :src="props.icon" class="icon" />
       </div>
     </template>
   </VueRadioButton>
 </template>
 
+<script>
+  export default {
+    data: () => ({
+      selectedButton: "",
+      buttons: [
+        {
+          id: 1,
+          icon: "https://vuejs.org/images/logo.svg",
+          title: "Vue",
+        },
+        {
+          id: 2,
+          icon: "https://vitejs.dev/logo.svg",
+          title: "ٰVite",
+        },
+      ],
+    }),
+  };
+</script>
+
 <style>
-  .vueRadioButton {
+  .vue-radio-button {
     height: 100%;
     width: 100%;
     display: flex;
@@ -167,7 +227,7 @@ Vue.use(VueRadioButton);
     height="80"
   >
     <template #default="{ props }">
-      <div class="vueRadioButton">
+      <div class="vue-radio-button">
         <img width="40" height="40" :src="props.icon" class="icon" />
         <div class="title">
           {{ props.title }}
@@ -177,8 +237,28 @@ Vue.use(VueRadioButton);
   </VueRadioButton>
 </template>
 
+<script>
+  export default {
+    data: () => ({
+      selectedButton: "",
+      buttons: [
+        {
+          id: 1,
+          icon: "https://vuejs.org/images/logo.svg",
+          title: "Vue",
+        },
+        {
+          id: 2,
+          icon: "https://vitejs.dev/logo.svg",
+          title: "ٰVite",
+        },
+      ],
+    }),
+  };
+</script>
+
 <style>
-  .vueRadioButton {
+  .vue-radio-button {
     height: 100%;
     width: 100%;
     display: flex;
