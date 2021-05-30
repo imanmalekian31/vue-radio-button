@@ -2,7 +2,7 @@
   <div>
     <VueRadioButton v-model="selectedButton" :options="buttons">
       <template #default="{ props }">
-        <div class="vueRadioButton">
+        <div class="vue-radio-button">
           <img width="40" height="40" :src="props.icon" class="icon" />
           <div class="title">
             {{ props.title }}
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style scoped>
-.vueRadioButton {
+.vue-radio-button {
   height: 100%;
   width: 100%;
   display: flex;
