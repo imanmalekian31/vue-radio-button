@@ -76,7 +76,7 @@ export default {
   height: var(--height);
   border-radius: 8px;
   background-color: #fff;
-  border: 1px solid #a7bbc7;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   color: #606f7b;
   display: inline-block;
   position: relative;
