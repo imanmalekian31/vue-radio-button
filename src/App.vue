@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Vue Radio Button</h1>
-    <a href="https://github.com/imanmalekian31/vue-radio-botton" target="blank">
+    <a href="https://github.com/imanmalekian31/vue-radio-button" target="blank">
       <img width="40" height="40" :src="require('./assets/github-logo.png')" />
     </a>
 
