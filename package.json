@@ -1,6 +1,6 @@
 {
   "name": "vue-radio-button",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "files": [
     "dist/*"
@@ -25,7 +25,7 @@
     "lint": "vue-cli-service lint",
     "start": "node server.js"
   },
-  "main": ".dist/vue-radio-button.common.js",
+  "main": "dist/vue-radio-button.common.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "express": "^4.17.1",
