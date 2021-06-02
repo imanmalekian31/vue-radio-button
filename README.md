@@ -38,16 +38,17 @@ Vue.use(VueRadioButton);
     <template #default="{ props }">
       <div class="vue-radio-button">
         <img width="40" height="40" :src="props.icon" class="icon" />
-        <div class="title">
-          {{ props.title }}
-        </div>
+        <div class="title">{{ props.title }}</div>
       </div>
     </template>
   </VueRadioButton>
 </template>
 
 <script>
+  import VueRadioButton from "vue-radio-button";
+
   export default {
+    components: { VueRadioButton },
     data: () => ({
       selectedButton: "",
       buttons: [
@@ -110,16 +111,17 @@ Vue.use(VueRadioButton);
     <template #default="{ props }">
       <div class="vue-radio-button">
         <img width="40" height="40" :src="props.icon" class="icon" />
-        <div class="title">
-          {{ props.title }}
-        </div>
+        <div class="title">{{ props.title }}</div>
       </div>
     </template>
   </VueRadioButton>
 </template>
 
 <script>
+  import VueRadioButton from "vue-radio-button";
+
   export default {
+    components: { VueRadioButton },
     data: () => ({
       selectedButton: "",
       buttons: [
@@ -180,7 +182,10 @@ Vue.use(VueRadioButton);
 </template>
 
 <script>
+  import VueRadioButton from "vue-radio-button";
+
   export default {
+    components: { VueRadioButton },
     data: () => ({
       selectedButton: "",
       buttons: [
@@ -229,16 +234,17 @@ Vue.use(VueRadioButton);
     <template #default="{ props }">
       <div class="vue-radio-button">
         <img width="40" height="40" :src="props.icon" class="icon" />
-        <div class="title">
-          {{ props.title }}
-        </div>
+        <div class="title">{{ props.title }}</div>
       </div>
     </template>
   </VueRadioButton>
 </template>
 
 <script>
+  import VueRadioButton from "vue-radio-button";
+
   export default {
+    components: { VueRadioButton },
     data: () => ({
       selectedButton: "",
       buttons: [
