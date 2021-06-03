@@ -24,9 +24,9 @@
   },
   "main": "src/install.js",
   "dependencies": {
-    "vue": "^2.6.11",
     "express": "^4.17.1",
-    "serve-static": "^1.14.1"
+    "serve-static": "^1.14.1",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
