@@ -1,26 +1,33 @@
 <template>
-  <div :style="cssVariables">
-    <div
-      v-for="(option, idx) in options"
-      :key="idx"
-      :class="{
-        'v-radio-button': true,
-        'v-radio-button-active': option.id === value.id,
-      }"
-      v-bind="$attrs"
-      v-on="$listeners"
-      @click="updateValue($event, option)"
-    >
-      <slot :props="option" />
-    </div>
+  <div class="v-radio-container">
+    <template v-for="(option, idx) in options">
+      <input
+        :key="`input-${idx}`"
+        :id="`input-${idx}`"
+        type="radio"
+        name="iman"
+        :value="option.id"
+        :checked="isActive(option.id)"
+        @input="updateActivePlan"
+      />
+      <label
+        :key="`label-${idx}`"
+        :for="`input-${idx}`"
+        :class="{
+          'v-radio-label': true,
+          'v-radio-active': isActive(option.id),
+        }"
+      >
+        <slot name="label" :props="option">
+          {{ option.title }}
+        </slot>
+      </label>
+    </template>
   </div>
 </template>
 
 <script>
-import ripple from "../mixins/ripple";
-
 export default {
-  mixins: [ripple],
   model: {
     prop: "value",
     event: "update",
@@ -33,85 +40,28 @@ export default {
       type: Array,
       required: true,
     },
-    width: {
-      type: [String, Number],
-      default: 100,
-    },
-    height: {
-      type: [String, Number],
-      default: 100,
-    },
-    color: {
-      type: String,
-      default: "#9e9e9e30",
-    },
-    noRipple: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  computed: {
-    cssVariables() {
-      return {
-        "--width": this.width + "px",
-        "--height": this.height + "px",
-        "--active-color": this.color,
-      };
-    },
+    name: {
+      default : 'vue-radio-button',
+      type:[String , Number]
+    }
   },
   methods: {
-    updateValue(event, option) {
-      if (!this.noRipple) {
-        this.createRipple(event);
-      }
-      this.$emit("update", option);
+    updateActivePlan(e) {
+      this.$emit("update", e.target.value);
     },
+    isActive(id){
+      return this.value == id
+    }
   },
 };
 </script>
 
-<style>
-.v-radio-button {
-  width: var(--width);
-  height: var(--height);
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  color: #606f7b;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
+<style scoped>
+.v-radio-container input {
+  display: none;
+}
+
+.v-radio-label {
   cursor: pointer;
-  font-family: Arial;
-  margin-right: 10px;
-}
-
-.v-radio-button .content {
-  width: 100%;
-  height: 100%;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.v-radio-button-active {
-  background-color: var(--active-color);
-}
-</style>
-<style>
-span.ripple {
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple 400ms linear;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
 }
 </style>
